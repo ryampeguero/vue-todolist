@@ -26,8 +26,8 @@
             <div class="container">
                 <!-- Top box -->
                 <div class="top">
-                    <input type="text" placeholder="es. Fare la spesa">
-                    <button>Add Task</button>
+                    <input type="text" placeholder="es. Fare la spesa" v-model="tempTodo.text">
+                    <button @click="addTask">Add Task</button>
                 </div>
                 <!-- /Top box -->
 
@@ -49,8 +49,8 @@
                             <!-- Todo correnti -->
                             <ul class="inner-list">
                                 <!-- Todo corrente -->
-                                <li v-for="curTodo in todoCont" :class="(curTodo.done == true) ? 'done' : ''">
-                                    <span class="circle cross">&cross;</span>
+                                <li v-for="(curTodo,index) in todoCont" :class="(curTodo.done == true) ? 'done' : ''">
+                                    <span class="circle cross" @click="deleteTask(index)">&cross;</span>
                                     <span>{{curTodo.text}}</span>
                                     <span class="tag recruiting">Recruting</span>
                                 </li>
