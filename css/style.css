@@ -62,6 +62,15 @@ ul {
     padding: 40px;
 }
 
+.main-list {
+    overflow-y: scroll;
+}
+
+.inner-list {
+    max-height: 100px;
+    overflow-y: scroll;
+}
+
 .main-list h3{
     text-transform: uppercase;
 }
@@ -73,6 +82,7 @@ ul {
 .inner-list > li {
     background-color: white;
     padding: 10px;
+    
 }
 
 .circle {
