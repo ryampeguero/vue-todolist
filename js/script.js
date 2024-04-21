@@ -3,16 +3,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-            todoCont: [
-                {
-                    text: "Cosa da fare",
-                    done: false,
-                },
-                {
-                    text: "Cosa da fare1",
-                    done: true,
-                },
-            ],
+            todoCont: this.setItemList(),
 
             tempTodo: {
                 text: "",
@@ -23,7 +14,9 @@ createApp({
     },
 
     created(){
-        
+        const itemsJson = this.getJson();
+        console.log(itemsJson);
+        localStorage.setItem("todoList", itemsJson);
     },
 
     mounted(){},
@@ -41,7 +34,32 @@ createApp({
         },
 
         setToDone: function(index){
-            this.todoCont[index].done = !this.todoCont[index].done;
+            if(this.todoCont[index])
+                this.todoCont[index].done = !this.todoCont[index].done;
+        },
+
+        getJson: function(){
+            
+            return JSON.stringify(this.todoCont);
+        },
+
+        setItemList: function(){
+            const holder = [
+                {
+                    text: "Cosa da fare",
+                    done: false,
+                },
+                {
+                    text: "Cosa da fare1",
+                    done: true,
+                },
+            ];
+
+            if(localStorage.getItem("todoList")){
+                return JSON.parse(localStorage.getItem("todoList"));
+            }else{
+                return holder;
+            }
         }
     }
 
