@@ -1,0 +1,118 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+body {
+    font-family: Arial, sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+/* HEADER */
+.header {
+    background-color: #ECF1F6;
+    text-align: center;
+}
+
+.logo-img,
+.logo-text{
+    vertical-align: middle;
+}
+
+.logo-text{
+    font-weight: 600;
+    font-size: 24px;
+}
+
+/* MAIN */
+.container{
+    width: 60%;
+    margin: 60px auto 10px;
+    background-color: #ECF1F6;
+
+    /* Debug */
+    height: 400px;
+}
+
+.top{
+    padding: 15px 0;
+    text-align: center;
+}
+
+.top input,
+.top button{
+    padding: 5px;
+    border: 0;
+    border-radius: 5px;
+}
+
+.top button{
+    background-color: #24AFEA;
+    color: white;
+}
+
+/* List box */
+.list-box {
+    padding: 40px;
+}
+
+.main-list h3{
+    text-transform: uppercase;
+}
+
+.main-list > li {
+    margin-bottom: 15px;
+}
+
+.inner-list > li {
+    background-color: white;
+    padding: 10px;
+}
+
+.circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    /* line-height dev'essere unguale a height per centrarlo verticalmente */
+    line-height: 30px;
+}
+
+.check {
+    color: green;
+    border: 1px solid green;
+}
+
+.cross { 
+    color: red;
+    border: 1px solid red;
+}
+
+.done,
+.done .tag {
+    text-decoration: line-through;
+    text-decoration-color: black;
+}
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    color: white;
+}
+
+.editorial {
+    background-color: #09a9ed;
+}
+
+.recruiting {
+    background-color: #2cc6ab;
+}
+    

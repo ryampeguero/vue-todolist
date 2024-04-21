@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toboolist</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <img class="logo-img" src="./img/logo1.png" alt="Toboolist logo">
+        <span class="logo-text">Toboolist</span>
+    </header>
+    <!-- /Header -->
+
+    <!-- Main -->
+    <main>
+        <div class="container">
+            <!-- Top box -->
+            <div class="top">
+                <input type="text" placeholder="es. Fare la spesa">
+                <button>Add Task</button>
+            </div>
+            <!-- /Top box -->
+
+            <!-- List box -->
+            <div class="list-box">
+                <ul class="main-list">
+                    <li>
+                        <h3>&#11166; Task precedenti</h3>
+                        <ul class="inner-list">
+                            <li class="done">
+                                <span class="circle check">&check;</span>
+                                <span>Quarterly Newsletter</span>
+                                <span class="tag editorial">Editorial</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>&#11166; Oggi</h3>
+                        <ul class="inner-list">
+                            <li>
+                                <span class="circle cross">&cross;</span>
+                                <span>Quarterly Newsletter</span>
+                                <span class="tag recruiting">Recruting</span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>&#11166; Prossimi giorni</h3>
+                    </li>
+                </ul>
+            </div>
+            <!-- /List box -->
+        </div>
+    </main>
+    <!-- /Main -->
+    <script src="./js/script.js"></script>
+</body>
+</html>
