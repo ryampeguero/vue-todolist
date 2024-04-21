@@ -14,9 +14,7 @@ createApp({
     },
 
     created(){
-        const itemsJson = this.getJson();
-        console.log(itemsJson);
-        localStorage.setItem("todoList", itemsJson);
+        this.setJson();
     },
 
     mounted(){},
@@ -27,6 +25,7 @@ createApp({
                 this.todoCont.push(this.tempTodo);
                 this.tempTodo = "";
             }
+            this.setJson();
         },
 
         deleteTask: function(index){
@@ -34,13 +33,17 @@ createApp({
         },
 
         setToDone: function(index){
-            if(this.todoCont[index])
+            if(this.todoCont[index]){
                 this.todoCont[index].done = !this.todoCont[index].done;
+                this.setJson();
+            }
         },
 
-        getJson: function(){
-            
-            return JSON.stringify(this.todoCont);
+        setJson: function(){
+            const itemsJson = JSON.stringify(this.todoCont);
+            console.log(itemsJson);
+            localStorage.setItem("todoList", itemsJson);
+        
         },
 
         setItemList: function(){
