@@ -38,6 +38,10 @@ createApp({
 
         deleteTask: function(index){
             this.todoCont.splice(index,1);
+        },
+
+        setToDone: function(index){
+            this.todoCont[index].done = !this.todoCont[index].done;
         }
     }
 
